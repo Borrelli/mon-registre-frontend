@@ -1,9 +1,9 @@
 import { createStore, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { rootReducer } from "./root-reducer";
-import { InMemoryRepository } from "../../adapters/repositories/in-memory.repository";
+import { InMemoryAPI } from "../../adapters/API/in-memory.repository";
 
-const apiClient = new InMemoryRepository();
+const apiClient = new InMemoryAPI();
 
 export const store = createStore(
   rootReducer,
