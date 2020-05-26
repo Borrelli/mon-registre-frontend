@@ -1,6 +1,6 @@
 import { IRevenueState, RevenueActionTypes } from "./revenue.types";
 
-export const initialState: IRevenueState = {
+const initialState: IRevenueState = {
   isLoading: false,
   err: "",
   revenues: [],

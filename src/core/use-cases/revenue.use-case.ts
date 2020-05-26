@@ -8,7 +8,7 @@ import {
 export const receiveRevenuesUseCase: ReceiveRevenuesThunk = () => async (dispatch, getState, API) => {
   try {
     dispatch(receiveRevenuesRequest());
-    const userToken = localStorage.getItem("token")!;
+    const userToken = localStorage.getItem("userToken")!;
     const response = await API.receiveRevenue(userToken);
     dispatch(receiveRevenuesSuccess(response.data));
   } catch (err) {

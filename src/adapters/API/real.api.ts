@@ -16,4 +16,18 @@ export class RealAPI implements IAPIPort {
     };
     return axios(requestBody);
   }
+
+  public createUser(firstname: string, lastname: string, email: string, password: string): AxiosPromise<string> {
+    const requestBody: any = {
+      url: `${this.APIBaseURL}/user/create`,
+      method: "POST",
+      data: {
+        firstname,
+        lastname,
+        email,
+        password,
+      },
+    };
+    return axios(requestBody);
+  }
 }

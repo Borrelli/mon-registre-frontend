@@ -30,4 +30,8 @@ export class InMemoryAPI implements IAPIPort {
   public receiveRevenue(): Promise<any> {
     return Promise.resolve({ data: this.revenueList });
   }
+
+  public createUser(firstname: string, lastname: string, email: string, password: string): Promise<any> {
+    throw new Error("Method not implemented.");
+  }
 }

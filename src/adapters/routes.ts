@@ -1,7 +1,9 @@
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import AddIcon from "@material-ui/icons/Add";
+import PersonAddIcon from "@material-ui/icons/PersonAdd";
 import { Dashboard } from "./views/pages/dashboard.page";
 import { AddRevenue } from "./views/pages/add-revenue.page";
+import { Register } from "./views/pages/register.page";
 import { SFC } from "react";
 
 interface IRoute {
@@ -23,5 +25,11 @@ export const routes: IRoute[] = [
     url: "/ajouter-un-revenu",
     icon: AddIcon,
     component: AddRevenue,
+  },
+  {
+    title: "Inscription",
+    url: "/inscription",
+    icon: PersonAddIcon,
+    component: Register,
   },
 ];
