@@ -1,5 +1,5 @@
 import { IAPIPort } from "../../core/ports/API.port";
-import { IRevenue } from "../../core/entities/revenue.entity";
+import { IRevenue, IRevenueDTO } from "../../core/entities/revenue.entity";
 
 export class InMemoryAPI implements IAPIPort {
   private revenueList: IRevenue[] = [
@@ -26,6 +26,10 @@ export class InMemoryAPI implements IAPIPort {
       reference: "paiement-ref3",
     },
   ];
+
+  public createRevenue(userToken: string, revenue: IRevenueDTO): Promise<any> {
+    throw new Error("Method not implemented.");
+  }
 
   public receiveRevenue(): Promise<any> {
     return Promise.resolve({ data: this.revenueList });

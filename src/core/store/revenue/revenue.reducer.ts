@@ -28,6 +28,24 @@ export const revenueReducer = (state = initialState, action: RevenueActionTypes)
         isLoading: false,
       };
     }
+    case "CREATE_REVENUE_REQUEST": {
+      return {
+        ...state,
+        isLoading: true,
+      };
+    }
+    case "CREATE_REVENUE_SUCCESS": {
+      return {
+        ...state,
+        isLoading: false,
+      };
+    }
+    case "CREATE_REVENUE_FAILURE": {
+      return {
+        ...state,
+        isLoading: false,
+      };
+    }
     default:
       return state;
   }
