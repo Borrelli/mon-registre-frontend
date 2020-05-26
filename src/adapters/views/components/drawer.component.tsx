@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SFC } from "react";
 import MUIDrawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const Drawer = () => {
+export const Drawer: SFC = () => {
   const location = useLocation();
 
   const classes = useStyles();
@@ -40,16 +40,19 @@ export const Drawer = () => {
     >
       <Divider />
       <List>
-        {routes.map((route) => (
-          <Link to={route.url} key={route.title} className={classes.drawerLink}>
-            <ListItem selected={route.url === location.pathname} button>
-              <ListItemIcon>
-                <route.icon />
-              </ListItemIcon>
-              <ListItemText primary={route.title} />
-            </ListItem>
-          </Link>
-        ))}
+        {routes.map(
+          (route) =>
+            route.visible && (
+              <Link to={route.url} key={route.title} className={classes.drawerLink}>
+                <ListItem selected={route.url === location.pathname} button>
+                  <ListItemIcon>
+                    <route.icon />
+                  </ListItemIcon>
+                  <ListItemText primary={route.title} />
+                </ListItem>
+              </Link>
+            )
+        )}
       </List>
     </MUIDrawer>
   );

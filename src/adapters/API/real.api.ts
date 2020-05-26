@@ -5,6 +5,7 @@ import { IRevenueDTO } from "../../core/DTO/revenue.DTO";
 
 export class RealAPI implements IAPIPort {
   private APIBaseURL = "";
+
   constructor(private APIDomain: string, private APIPrefix: string = "api") {
     this.APIBaseURL = `${this.APIDomain}/${this.APIPrefix}`;
   }

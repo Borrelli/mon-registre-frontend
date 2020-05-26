@@ -1,8 +1,8 @@
-import React from "react";
+import React, { SFC } from "react";
 import ReactLoader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-export const Loader = () => (
+export const Loader: SFC = () => (
   <div
     style={{
       display: "flex",

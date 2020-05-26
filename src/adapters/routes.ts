@@ -11,6 +11,7 @@ interface IRoute {
   url: string;
   icon: any;
   component: SFC;
+  visible: boolean;
 }
 
 export const routes: IRoute[] = [
@@ -19,17 +20,20 @@ export const routes: IRoute[] = [
     url: "/",
     icon: DashboardIcon,
     component: Dashboard,
+    visible: true,
   },
   {
     title: "Ajouter un revenu",
     url: "/ajouter-un-revenu",
     icon: AddIcon,
     component: AddRevenue,
+    visible: true,
   },
   {
     title: "Inscription",
     url: "/inscription",
     icon: PersonAddIcon,
     component: Register,
+    visible: false,
   },
 ];
