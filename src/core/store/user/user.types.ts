@@ -1,5 +1,5 @@
 import { ISharedThunkAction } from "../shared/thunk.types";
-import { IUserForm } from "../../entities/user.entity";
+import { IUserDTO } from "../../DTO/user.DTO";
 
 export const CREATE_USER_REQUEST = "CREATE_USER_REQUEST";
 export const CREATE_USER_SUCCESS = "CREATE_USER_SUCCESS";
@@ -29,4 +29,4 @@ export type CreateUserThunk = ({
   lastname,
   email,
   password,
-}: IUserForm) => ISharedThunkAction<UserActionTypes>;
+}: IUserDTO) => ISharedThunkAction<UserActionTypes>;

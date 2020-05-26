@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Button, TextField, Icon, Container } from "@material-ui/core";
 import { useDispatch } from "react-redux";
 import { createUserUseCase } from "../../../core/use-cases/user.use-case";
-import { IUserForm } from "../../../core/entities/user.entity";
+import { IUserDTO } from "../../../core/DTO/user.DTO";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 export const Register: SFC = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const [user, setUser] = useState<IUserForm>({
+  const [user, setUser] = useState<IUserDTO>({
     email: "",
     firstname: "",
     lastname: "",

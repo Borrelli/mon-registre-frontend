@@ -1,5 +1,6 @@
 import { IAPIPort } from "../../core/ports/API.port";
-import { IRevenue, IRevenueDTO } from "../../core/entities/revenue.entity";
+import { IRevenue } from "../../core/entities/revenue.entity";
+import { IRevenueDTO } from "../../core/DTO/revenue.DTO";
 
 export class InMemoryAPI implements IAPIPort {
   private revenueList: IRevenue[] = [

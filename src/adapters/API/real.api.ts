@@ -1,6 +1,7 @@
 import { IAPIPort } from "../../core/ports/API.port";
 import axios, { AxiosPromise } from "axios";
-import { IRevenue, IRevenueDTO } from "../../core/entities/revenue.entity";
+import { IRevenue } from "../../core/entities/revenue.entity";
+import { IRevenueDTO } from "../../core/DTO/revenue.DTO";
 
 export class RealAPI implements IAPIPort {
   private APIBaseURL = "";

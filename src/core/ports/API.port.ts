@@ -1,4 +1,4 @@
-import { IRevenueDTO } from "../entities/revenue.entity";
+import { IRevenueDTO } from "../DTO/revenue.DTO";
 
 export interface IAPIPort {
   createRevenue(userToken: string, revenue: IRevenueDTO): Promise<any>;

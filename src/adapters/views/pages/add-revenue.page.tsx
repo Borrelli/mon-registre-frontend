@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { TextField, Button, Icon, Grid } from "@material-ui/core";
 import { Drawer } from "../components/drawer.component";
-import { revenueCells, IRevenueDTO } from "../../../core/entities/revenue.entity";
+import { revenueCells } from "../../../core/entities/revenue.entity";
+import { IRevenueDTO } from "../../../core/DTO/revenue.DTO";
 import { useDispatch } from "react-redux";
 import { createRevenueUseCase } from "../../../core/use-cases/revenue.use-case";
 
