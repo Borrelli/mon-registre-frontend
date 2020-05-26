@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary,
-    textTransform: "capitalize",
   },
 }));
 
@@ -37,7 +36,7 @@ export const Dashboard: SFC = () => {
   if (selectRevenue.isLoading) return <Loader />;
 
   return (
-    <Layout>
+    <Layout title="Dashboard">
       <Grid container spacing={3} wrap="nowrap">
         {revenueCells.map((revenueProp) => (
           <Grid item key={revenueProp.key} xs>

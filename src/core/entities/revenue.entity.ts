@@ -19,26 +19,26 @@ export interface IRevenueBoard {
 export const revenueCells: IRevenueBoard[] = [
   {
     key: "reference",
-    title: "référence",
+    title: "Référence",
   },
   {
     key: "customerName",
-    title: "client",
+    title: "Client",
   },
   {
     key: "amountExcludingTax",
-    title: "HT",
+    title: "Montant HT",
   },
   {
     key: "amountIncludingTax",
-    title: "TTC",
+    title: "Montant TTC",
   },
   {
     key: "amountVAT",
-    title: "TVA",
+    title: "Montant TVA",
   },
   {
     key: "paiementMethod",
-    title: "type",
+    title: "Type",
   },
 ];

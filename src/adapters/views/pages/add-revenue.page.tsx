@@ -37,7 +37,7 @@ export const AddRevenue: SFC = () => {
   };
 
   return (
-    <Layout>
+    <Layout title="Ajouter un revenu">
       <Grid container spacing={3} wrap="nowrap">
         {revenueCells.map((revenue) => (
           <TextField

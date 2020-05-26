@@ -3,6 +3,10 @@ import { Drawer } from "../components/drawer.component";
 import { Header } from "../components/header.component";
 import { makeStyles } from "@material-ui/core";
 
+interface IProps {
+  title: string;
+}
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -14,12 +18,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const Layout: SFC = ({ children }) => {
+export const Layout: SFC<IProps> = ({ children, title }) => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Header />
+      <Header title={title} />
       <Drawer />
       <main className={classes.content}>{children}</main>
     </div>
