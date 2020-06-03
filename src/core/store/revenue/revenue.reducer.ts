@@ -1,12 +1,12 @@
 import { IRevenueState, RevenueActionTypes } from "./revenue.types";
 
-const initialState: IRevenueState = {
+export const initialRevenueState: IRevenueState = {
   isLoading: false,
   err: "",
   revenues: [],
 };
 
-export const revenueReducer = (state = initialState, action: RevenueActionTypes): IRevenueState => {
+export const revenueReducer = (state = initialRevenueState, action: RevenueActionTypes): IRevenueState => {
   switch (action.type) {
     case "RECEIVE_REVENUES_REQUEST": {
       return {

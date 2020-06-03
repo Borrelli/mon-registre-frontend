@@ -1,11 +1,11 @@
 import { IUserState, UserActionTypes } from "./user.types";
 
-const initialState: IUserState = {
+export const initialUserState: IUserState = {
   isLoading: false,
   err: "",
 };
 
-export const userReducer = (state = initialState, action: UserActionTypes): IUserState => {
+export const userReducer = (state = initialUserState, action: UserActionTypes): IUserState => {
   switch (action.type) {
     case "CREATE_USER_REQUEST": {
       return {
