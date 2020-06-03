@@ -1,10 +1,9 @@
-import { StubAPI } from "./stubs/stub.api";
 import { configMockStore } from "./mock/config-mock-store";
 import { receiveRevenuesUseCase } from "../src/core/use-cases/revenue.use-case";
 import { RECEIVE_REVENUES_REQUEST, RECEIVE_REVENUES_SUCCESS } from "../src/core/store/revenue/revenue.types";
-import { revenueList } from "./fake/fake.revenue-list";
+import { InMemoryAPI } from "../src/adapters/API/in-memory.api";
 
-const apiClient = new StubAPI();
+const apiClient = new InMemoryAPI();
 const mockStore = configMockStore(apiClient);
 const fakeToken = "token";
 
@@ -20,7 +19,7 @@ describe("Revenue use case", () => {
       expect(dispatchedActions[0].type).toEqual(RECEIVE_REVENUES_REQUEST);
       expect(apiClient.receiveRevenue).toBeCalledWith(fakeToken);
       expect(dispatchedActions[1].type).toEqual(RECEIVE_REVENUES_SUCCESS);
-      expect(dispatchedActions[1].payload).toEqual(revenueList);
+      expect(dispatchedActions[1].payload).toEqual(new InMemoryAPI().revenueList);
     });
   });
 });

@@ -3,7 +3,7 @@ import { IRevenue } from "../../core/entities/revenue.entity";
 import { IRevenueDTO } from "../../core/DTO/revenue.DTO";
 
 export class InMemoryAPI implements IAPIPort {
-  private revenueList: IRevenue[] = [
+  public revenueList: IRevenue[] = [
     {
       uid: "uid2",
       creationDate: new Date("2000-01-02"),
@@ -37,6 +37,6 @@ export class InMemoryAPI implements IAPIPort {
   }
 
   public createUser(firstname: string, lastname: string, email: string, password: string): Promise<any> {
-    throw new Error("Method not implemented.");
+    return Promise.resolve({ data: `'token'` });
   }
 }

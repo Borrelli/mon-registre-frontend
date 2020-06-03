@@ -1,10 +1,10 @@
 import { createUserUseCase } from "../src/core/use-cases/user.use-case";
 import { IUserDTO } from "../src/core/DTO/user.DTO";
 import { CREATE_USER_REQUEST, CREATE_USER_SUCCESS } from "../src/core/store/user/user.types";
-import { StubAPI } from "./stubs/stub.api";
 import { configMockStore } from "./mock/config-mock-store";
+import { InMemoryAPI } from "../src/adapters/API/in-memory.api";
 
-const apiClient = new StubAPI();
+const apiClient = new InMemoryAPI();
 const mockStore = configMockStore(apiClient);
 
 jest.spyOn(apiClient, "createUser");
