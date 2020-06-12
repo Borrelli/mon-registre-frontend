@@ -1,5 +1,4 @@
 import React, { useState, SFC } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import { TextField, Button, Icon, Grid } from "@material-ui/core";
 import { revenueCells } from "../../../core/entities/revenue.entity";
 import { IRevenueDTO } from "../../../core/DTO/revenue.DTO";
@@ -7,18 +6,7 @@ import { useDispatch } from "react-redux";
 import { createRevenueUseCase } from "../../../core/use-cases/revenue.use-case";
 import { Layout } from "../layout";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
-  },
-}));
-
 export const AddRevenue: SFC = () => {
-  const classes = useStyles();
   const dispatch = useDispatch();
   const [revenue, setRevenue] = useState<IRevenueDTO>({
     amountExcludingTax: 0,
@@ -29,7 +17,7 @@ export const AddRevenue: SFC = () => {
     reference: "",
   });
 
-  const onChange = (e: any) => {
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setRevenue({
       ...revenue,
       [e.target.name]: e.target.value,

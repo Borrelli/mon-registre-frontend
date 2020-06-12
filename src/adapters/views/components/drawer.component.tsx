@@ -11,7 +11,7 @@ import { useLocation, Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,

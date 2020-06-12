@@ -1,4 +1,4 @@
-import React, { useEffect, SFC, useState } from "react";
+import React, { SFC, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button, TextField, Icon, Container } from "@material-ui/core";
 import { useDispatch } from "react-redux";
@@ -31,7 +31,7 @@ export const Register: SFC = () => {
     password: "",
   });
 
-  const onChange = (e: any) => {
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUser({
       ...user,
       [e.target.name]: e.target.value,
