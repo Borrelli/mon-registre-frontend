@@ -1,5 +1,5 @@
 import { ISharedThunkAction } from "../shared/thunk.types";
-import { IUserDTO } from "../../DTO/user.DTO";
+import { IUserDTO } from "../../core/DTO/user.DTO";
 
 export const CREATE_USER_REQUEST = "CREATE_USER_REQUEST";
 export const CREATE_USER_SUCCESS = "CREATE_USER_SUCCESS";

@@ -1,5 +1,5 @@
 import { ReceiveRevenues, CreateRevenue } from "./revenue.types";
-import { IRevenue } from "../../entities/revenue.entity";
+import { IRevenue } from "../../core/entities/revenue.entity";
 
 export const receiveRevenuesRequest = (): ReceiveRevenues => {
   return {

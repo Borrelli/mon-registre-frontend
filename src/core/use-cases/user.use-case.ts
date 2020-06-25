@@ -1,5 +1,5 @@
-import { CreateUserThunk } from "../store/user/user.types";
-import { createUserFailure, createUserSuccess, createUserRequest } from "../store/user/user.actions";
+import { CreateUserThunk } from "../../store/user/user.types";
+import { createUserFailure, createUserSuccess, createUserRequest } from "../../store/user/user.actions";
 
 export const createUserUseCase: CreateUserThunk = ({ firstname, lastname, email, password }) => async (
   dispatch,

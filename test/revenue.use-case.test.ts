@@ -1,6 +1,6 @@
 import { configMockStore } from "./mock/config-mock-store";
 import { receiveRevenuesUseCase } from "../src/core/use-cases/revenue.use-case";
-import { RECEIVE_REVENUES_REQUEST, RECEIVE_REVENUES_SUCCESS } from "../src/core/store/revenue/revenue.types";
+import { RECEIVE_REVENUES_REQUEST, RECEIVE_REVENUES_SUCCESS } from "../src/store/revenue/revenue.types";
 import { InMemoryAPI } from "../src/adapters/API/in-memory.api";
 
 const apiClient = new InMemoryAPI();

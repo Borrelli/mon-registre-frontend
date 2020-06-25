@@ -1,4 +1,4 @@
-import { ReceiveRevenuesThunk, CreateRevenueThunk } from "../store/revenue/revenue.types";
+import { ReceiveRevenuesThunk, CreateRevenueThunk } from "../../store/revenue/revenue.types";
 import {
   receiveRevenuesFailure,
   receiveRevenuesSuccess,
@@ -6,7 +6,7 @@ import {
   createRevenueRequest,
   createRevenueSuccess,
   createRevenueFailure,
-} from "../store/revenue/revenue.actions";
+} from "../../store/revenue/revenue.actions";
 
 export const receiveRevenuesUseCase: ReceiveRevenuesThunk = () => async (dispatch, getState, API) => {
   try {

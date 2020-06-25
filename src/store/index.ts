@@ -1,8 +1,8 @@
 import { createStore, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { rootReducer } from "./root-reducer";
-import { RealAPI } from "../../adapters/API/real.api";
-import { EnvConfiguration } from "../../configuration/env.configuration";
+import { RealAPI } from "../adapters/API/real.api";
+import { EnvConfiguration } from "../configuration/env.configuration";
 
 const APIAdapter = new RealAPI(EnvConfiguration.API_URL);
 

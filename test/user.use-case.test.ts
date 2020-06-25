@@ -1,6 +1,6 @@
 import { createUserUseCase } from "../src/core/use-cases/user.use-case";
 import { IUserDTO } from "../src/core/DTO/user.DTO";
-import { CREATE_USER_REQUEST, CREATE_USER_SUCCESS } from "../src/core/store/user/user.types";
+import { CREATE_USER_REQUEST, CREATE_USER_SUCCESS } from "../src/store/user/user.types";
 import { configMockStore } from "./mock/config-mock-store";
 import { InMemoryAPI } from "../src/adapters/API/in-memory.api";
 

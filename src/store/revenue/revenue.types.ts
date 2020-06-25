@@ -1,5 +1,5 @@
-import { IRevenue } from "../../entities/revenue.entity";
-import { IRevenueDTO } from "../../DTO/revenue.DTO";
+import { IRevenue } from "../../core/entities/revenue.entity";
+import { IRevenueDTO } from "../../core/DTO/revenue.DTO";
 import { ISharedThunkAction } from "../shared/thunk.types";
 
 export const RECEIVE_REVENUES_REQUEST = "RECEIVE_REVENUES_REQUEST";
